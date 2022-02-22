@@ -1,8 +1,18 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import oms from "../images/oms.png";
+import afp from "../images/afp.jpg";
+import ecoways from "../images/ecoways.png";
+import insta from "../images/insta.png";
+import tindog from "../images/tindog.png";
+import storyBook from "../images/storybook.png";
+import imc from "../images/imc.png";
+import { CONST } from "../utils/const";
 
 const Timeline = () => {
   const { t } = useTranslation();
+  const [work, setWork] = useState("software");
+  const returnGithubUrl = (repo) => `${CONST.GITHUB}/${repo}`;
   return (
     <div>
       <section className="colorlib-experience" data-section="experience">
@@ -205,10 +215,15 @@ const Timeline = () => {
             <div className="col-md-12">
               <p className="work-menu">
                 <span>
-                  <a href="/">{t("software")}</a>
+                  <a onClick={() => setWork("software")}>{t("software")}</a>
                 </span>
                 <span>
-                  <a href="/">{t("apps")}</a>
+                  <a onClick={() => setWork("apps")}>{t("apps")}</a>
+                </span>
+                <span>
+                  <a onClick={() => setWork("personalProjects")}>
+                    {t("personalProjects")}
+                  </a>
                 </span>
               </p>
             </div>
@@ -220,21 +235,31 @@ const Timeline = () => {
             >
               <div
                 className="project"
-                style={{ backgroundImage: "url(../images/splash.png)" }}
+                style={{
+                  backgroundImage: `url(${oms})`,
+                  backgroundSize: "contain",
+                }}
               >
                 <div className="desc">
                   <div className="con">
                     <h3>
-                      <a href="/">Lecaros APP</a>
+                      <a href="https://omstock.app/">{t("oms")}</a>
                     </h3>
-                    <span>Mobile App</span>
+                    <span>{t("omsDesc")}</span>
                     <p className="icon">
                       <span>
-                        <a
-                          href="https://play.google.com/store/apps/details?id=com.lecarosapp&hl=es"
-                          target={"_blank"}
-                        >
-                          <i className="icon-android"></i>View on Google Play
+                        <a href="https://omstock.app/" target={"_blank"}>
+                          <i className="icon-chrome"></i>
+                        </a>
+                      </span>
+                      <span>
+                        <a href="https://omstock.app/" target={"_blank"}>
+                          <i className="icon-firefox"></i>
+                        </a>
+                      </span>
+                      <span>
+                        <a href="https://omstock.app/" target={"_blank"}>
+                          <i className="icon-safari"></i>
                         </a>
                       </span>
                     </p>
@@ -248,26 +273,61 @@ const Timeline = () => {
             >
               <div
                 className="project"
-                style={{ backgroundImage: "url(../images/unnamed.jpg)" }}
+                style={{
+                  backgroundImage: `url(${afp})`,
+                }}
               >
                 <div className="desc">
                   <div className="con">
                     <h3>
-                      <a href="/">AFP Capital APP</a>
+                      <a href="/">{t("afpCapital")}</a>
                     </h3>
-                    <span>Mobile App</span>
+                    <span>{t("mobileApp")}</span>
                     <p className="icon">
                       <span>
-                        <a href="https://itunes.apple.com/cl/app/afp-capital/id1380508222?mt=8">
-                          <i className="icon-appleinc"></i> View on App Store
+                        <a href="https://apps.apple.com/cl/app/mi-afp-capital/id1573411065">
+                          <i className="icon-appleinc"></i>{" "}
+                          {t("viewOnAppStore")}
                         </a>
                       </span>
                       <span>
                         <a
-                          href="https://play.google.com/store/apps/details?id=cl.sura.afpcapital.movil"
+                          href="https://play.google.com/store/apps/details?id=cl.sura.afpcapital.appa.movil&hl=es_CL&gl=US"
                           target={"_blank"}
                         >
-                          <i className="icon-android"></i> View on Play Store
+                          <i className="icon-android"></i>{" "}
+                          {t("viewOnPlayStore")}
+                        </a>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-md-6 animate-box"
+              data-animate-effect="fadeInRight"
+            >
+              <div
+                className="project"
+                style={{
+                  backgroundImage: `url(${ecoways})`,
+                }}
+              >
+                <div className="desc">
+                  <div className="con">
+                    <h3>
+                      <a href="/">{t("ecoWays")}</a>
+                    </h3>
+                    <span>{t("mobileApp")}</span>
+                    <p className="icon">
+                      <span>
+                        <a
+                          href="https://play.google.com/store/apps/details?id=com.walmart.ecoways&hl=en_US&gl=US"
+                          target={"_blank"}
+                        >
+                          <i className="icon-android"></i>{" "}
+                          {t("viewOnPlayStore")}
                         </a>
                       </span>
                     </p>
@@ -281,23 +341,20 @@ const Timeline = () => {
             >
               <div
                 className="project"
-                style={{ backgroundImage: "url(../images/insta.png)" }}
+                style={{
+                  backgroundImage: `url(${insta})`,
+                }}
               >
                 <div className="desc">
                   <div className="con">
                     <h3>
-                      <a href="/">
-                        A simple Instagram clone made with React Native
-                      </a>
+                      <a href={returnGithubUrl("Insta")}>{t("instaClone")}</a>
                     </h3>
-                    <span>Prototype</span>
+                    <span>{t("prototype")}</span>
                     <p className="icon">
                       <span>
-                        <a
-                          href="https://gitlab.com/offcarlospetit/Insta"
-                          target={"_blank"}
-                        >
-                          <i className="icon-git"></i> View Code On GitLab
+                        <a href={returnGithubUrl("Insta")} target={"_blank"}>
+                          <i className="icon-git"></i> {t("viewCodeOnGithub")}
                         </a>
                       </span>
                     </p>
@@ -311,25 +368,95 @@ const Timeline = () => {
             >
               <div
                 className="project"
-                style={{ backgroundImage: "url(../images/tindog.png)" }}
+                style={{
+                  backgroundImage: `url(${tindog})`,
+                }}
               >
                 <div className="desc">
                   <div className="con">
                     <h3>
-                      <a href="/">
-                        Tindog: a simple clone of the Tinder application, but
-                        for your pet! this app was made in Swift 4 and with
-                        Firebase
+                      <a href={returnGithubUrl("tindog")}>{t("tindog")}</a>
+                    </h3>
+                    <span>{t("application")}</span>
+                    <p className="icon">
+                      <span>
+                        <a href={returnGithubUrl("tindog")} target={"_blank"}>
+                          <i className="icon-git"></i> {t("viewCodeOnGithub")}
+                        </a>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-md-6 animate-box"
+              data-animate-effect="fadeInBottom"
+            >
+              <div
+                className="project"
+                style={{
+                  backgroundImage: `url(${storyBook})`,
+                }}
+              >
+                <div className="desc">
+                  <div className="con">
+                    <h3>
+                      <a href={returnGithubUrl("testStoryBook")}>
+                        {t("storyBook")}
                       </a>
                     </h3>
-                    <span>Application</span>
+                    <span>{t("uikit")}</span>
                     <p className="icon">
                       <span>
                         <a
-                          href="https://gitlab.com/offcarlospetit/tindog"
+                          href={returnGithubUrl("testStoryBook")}
                           target={"_blank"}
                         >
-                          <i className="icon-git"></i> View Code On GitLab
+                          <i className="icon-git"></i> {t("viewCodeOnGithub")}
+                        </a>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-md-6 animate-box"
+              data-animate-effect="fadeInBottom"
+            >
+              <div
+                className="project"
+                style={{
+                  backgroundImage: `url(${imc})`,
+                }}
+              >
+                <div className="desc">
+                  <div className="con">
+                    <h3>
+                      <a
+                        href={
+                          "https://apps.apple.com/us/app/imc-calculator/id1560846103?l=es"
+                        }
+                      >
+                        {t("imc")}
+                      </a>
+                    </h3>
+                    <span>{t("imcDesc")}</span>
+                    <p className="icon">
+                      <span>
+                        <a href="https://apps.apple.com/us/app/imc-calculator/id1560846103?l=es">
+                          <i className="icon-appleinc"></i>{" "}
+                          {t("viewOnAppStore")}
+                        </a>
+                      </span>
+                      <span>
+                        <a
+                          href="https://play.google.com/store/apps/details?id=com.imccalculatorplus&hl=es&gl=US"
+                          target={"_blank"}
+                        >
+                          <i className="icon-android"></i>{" "}
+                          {t("viewOnPlayStore")}
                         </a>
                       </span>
                     </p>
@@ -342,18 +469,19 @@ const Timeline = () => {
       </section>
       {/* otra seccion */}
       {/* footer */}
-      <section className="colorlib-contact" data-section="contact">
-        <div className="colorlib-narrow-content">
+
+      <section class="colorlib-contact" data-section="contact">
+        <div class="colorlib-narrow-content">
           <div className="row">
             <div
               className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
               data-animate-effect="fadeInLeft"
             >
-              <span className="heading-meta">Get in Touch</span>
-              <h2 className="colorlib-heading">Contact</h2>
+              <span className="heading-meta">{t("contactMe")}</span>
+              <h2 className="colorlib-heading">{t("contact")}</h2>
             </div>
           </div>
-          <div className="row">
+          <div class="row">
             <div className="col-md-5">
               <div
                 className="colorlib-feature colorlib-feature-sm animate-box"
@@ -364,8 +492,8 @@ const Timeline = () => {
                 </div>
                 <div className="colorlib-text">
                   <p>
-                    <a href="mailto:offcarlospetit@gmail.com" target={"_blank"}>
-                      offcarlospetit@gmail.com
+                    <a href={`mailto:${CONST.EMAIL}`} target={"_blank"}>
+                      {CONST.EMAIL}
                     </a>
                   </p>
                 </div>
@@ -378,7 +506,7 @@ const Timeline = () => {
                   <i className="icon-map"></i>
                 </div>
                 <div className="colorlib-text">
-                  <p>Santiago, Chile</p>
+                  <p>{CONST.CITY}</p>
                 </div>
               </div>
               <div
@@ -390,16 +518,13 @@ const Timeline = () => {
                 </div>
                 <div className="colorlib-text">
                   <p>
-                    <a
-                      href="https://gitlab.com/offcarlospetit"
-                      target={"_blank"}
-                    >
-                      View my GitLab Page
+                    <a href={CONST.GITHUB} target={"_blank"}>
+                      {t("githupPage")}
                     </a>
                   </p>
                 </div>
               </div>
-              <div
+              {/* <div
                 className="colorlib-feature colorlib-feature-sm animate-box"
                 data-animate-effect="fadeInLeft"
               >
@@ -408,15 +533,12 @@ const Timeline = () => {
                 </div>
                 <div className="colorlib-text">
                   <p>
-                    <a
-                      href="https://twitter.com/offcarlospetit"
-                      target={"_blank"}
-                    >
-                      Twitter
+                    <a href={CONST.TWITTER} target={"_blank"}>
+                      {CONST.TWITTER}
                     </a>
                   </p>
                 </div>
-              </div>
+              </div> */}
               <div
                 className="colorlib-feature colorlib-feature-sm animate-box"
                 data-animate-effect="fadeInLeft"
@@ -426,16 +548,62 @@ const Timeline = () => {
                 </div>
                 <div className="colorlib-text">
                   <p>
-                    <a
-                      href="https://instagram.com/offcarlospetit"
-                      target={"_blank"}
-                    >
-                      Instagram
+                    <a href={CONST.INSTAGRAM} target={"_blank"}>
+                      {CONST.INSTAGRAM}
                     </a>
                   </p>
                 </div>
               </div>
             </div>
+            {/* <div class="col-md-7 col-md-push-1">
+              <div class="row">
+                <div
+                  class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box"
+                  data-animate-effect="fadeInRight"
+                >
+                  <form action="">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder={t("name")}
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder={t("email")}
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder={t("subject")}
+                      />
+                    </div>
+                    <div class="form-group">
+                      <textarea
+                        name=""
+                        id="message"
+                        cols="30"
+                        rows="7"
+                        class="form-control"
+                        placeholder={t("message")}
+                      ></textarea>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="submit"
+                        class="btn btn-primary btn-send-message"
+                        value={t("sendMessage")}
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div> */}
           </div>
         </div>
       </section>
