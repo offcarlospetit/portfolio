@@ -9,7 +9,7 @@ const resources = {
             imname: `Me llamo {{name}}`,
             im: `Soy`,
             developer: `desarrollador`,
-            download: `Download CV`,
+            download: `Descargar CV`,
             aboutme: 'Desarrollador móvil en santiago de chile',
             abouttitle: 'Acerca de mí',
             whoIam: 'Quien soy yo?',

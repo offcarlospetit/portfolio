@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import about3 from "../images/about3.jpg";
 
 const Introduction = () => {
   const { t } = useTranslation();
@@ -8,7 +9,12 @@ const Introduction = () => {
       <section id="colorlib-hero" className="js-fullheight" data-section="home">
         <div className="flexslider js-fullheight">
           <ul className="slides">
-            <li style={{ backgroundImage: "url(images/portada4.jpg)" }}>
+            <li
+              style={{
+                backgroundImage: `url(${about3})`,
+                backgroundSize: "contain",
+              }}
+            >
               <div className="overlay" />
               <div className="container-fluid">
                 <div className="row">
@@ -34,7 +40,12 @@ const Introduction = () => {
                 </div>
               </div>
             </li>
-            <li style={{ backgroundImage: "url(images/about3.jpg)" }}>
+            <li
+              style={{
+                backgroundImage: `url(${about3})`,
+                backgroundSize: "contain",
+              }}
+            >
               <div className="overlay" />
               <div className="container-fluid">
                 <div className="row">

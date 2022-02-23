@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { useTranslation } from "react-i18next";
+import about3 from "../images/about3.jpg";
 
 const Sidebar = () => {
   const { t } = useTranslation();
@@ -25,7 +26,7 @@ const Sidebar = () => {
           <div className="text-center">
             <div
               className="author-img"
-              style={{ backgroundImage: "url(images/about3.jpg)" }}
+              style={{ backgroundImage: `url(${about3})` }}
             ></div>
             <h1 id="colorlib-logo">
               <a href="index.html">Carlos Petit</a>
@@ -79,16 +80,7 @@ const Sidebar = () => {
               </ul>
             </div>
           </nav>
-          {/* <nav id="colorlib-main-menu">
-              <ul>
-                <li><a href="https://www.facebook.com/dhruv.barochia" target="_blank" rel="noopener noreferrer"><i className="icon-facebook2" /></a></li>
-                <li><a href="https://twitter.com/ddbarochiya" target="_blank" rel="noopener noreferrer"><i className="icon-twitter2" /></a></li>
-                <li><a href="https://www.instagram.com/ddbarochiya/" target="_blank" rel="noopener noreferrer"><i className="icon-instagram" /></a></li>
-                <li><a href="https://www.linkedin.com/in/dhruv-b-545b52a9/" target="_blank" rel="noopener noreferrer"><i className="icon-linkedin2" /></a></li>
-                <li><a href="https://github.com/Dhruv34788" target="_blank" rel="noopener noreferrer"><i className="icon-github"></i></a></li>
-                <li><a href="https://medium.com/@dhruv.barochia34788" target="_blank" rel="noopener noreferrer"><i className="icon-blogger2"></i></a></li>
-              </ul>
-            </nav> */}
+
           <div className="colorlib-footer">
             <p>
               <small>
@@ -106,9 +98,7 @@ const Sidebar = () => {
                 {t("forInspiration")}
               </small>
             </p>
-            <p>
-              
-            </p>
+            <p></p>
           </div>
         </aside>
       </div>
