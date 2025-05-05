@@ -1,10 +1,10 @@
 /* empty css                                 */
-import { c as createComponent, r as renderComponent, b as renderHead, g as renderTemplate } from '../chunks/astro/server_EOgdnrd5.mjs';
+import { a as createComponent, r as renderComponent, b as renderHead, g as renderTemplate } from '../chunks/astro/server_Mz-ejFHJ.mjs';
 import 'kleur/colors';
-import { $ as $$BaseHead, a as $$Header, d as $$Footer } from '../chunks/FormattedDate_Bi4zpvgV.mjs';
+import { $ as $$BaseHead, a as $$Header, d as $$Footer } from '../chunks/FormattedDate_cLRkcj9c.mjs';
 import { S as SITE_DESCRIPTION, a as SITE_TITLE } from '../chunks/consts_DtsrwfYD.mjs';
-import { g as getCollection } from '../chunks/_astro_content_lx3F3y7J.mjs';
-import { $ as $$WhatIDo } from '../chunks/WhatIDo_XNB-VtXK.mjs';
+import { g as getCollection } from '../chunks/_astro_content_cf5yRreT.mjs';
+import { $ as $$WhatIDo } from '../chunks/WhatIDo_COxrSHhQ.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {
@@ -15,7 +15,7 @@ const $$Index = createComponent(async ($$result, $$props, $$slots) => {
 }, "/Users/carlospetit/Documents/Develop/portfolio/src/pages/blog/index.astro", void 0);
 
 const $$file = "/Users/carlospetit/Documents/Develop/portfolio/src/pages/blog/index.astro";
-const $$url = "/blog";
+const $$url = "/portfolio/blog";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
