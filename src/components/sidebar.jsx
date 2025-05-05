@@ -76,6 +76,11 @@ const Sidebar = () => {
                     {t("contact")}
                   </a>
                 </li>
+                <li>
+                  <a href="/privacy" data-nav-section="privacy">
+                    {t("Privacy")}
+                  </a>
+                </li>
                 <li></li>
               </ul>
             </div>
