@@ -13,6 +13,6 @@ export default defineConfig({
   output: 'server',
   integrations: [mdx(), sitemap(), tailwind(), icon()],
   adapter: netlify(),
-  site: 'http://offcarlospetit.github.io/portfolio',
-  base: 'portfolio',
+  site: 'http://offcarlospetit.github.io',
+  base: '/portfolio',
 });
