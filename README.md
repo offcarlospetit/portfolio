@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# 🌐 Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio demo repository! This project is a demonstration of what a personal portfolio could look like. It showcases various aspects of web development, including my work, skills, and projects.
 
-## Available Scripts
+- You can view the deployed project at the following URL: [https://sorolla.netlify.app/](https://sorolla.netlify.app/)
+- Astro web templates: https://astro.build/themes/details/sorollaportfolio/
 
-In the project directory, you can run:
+## 📂 Project Structure
 
-### `npm start`
+- **public/**: Contains public assets like images and fonts.
+- **src/**: Includes the source code for the portfolio.
+- **.gitignore**: Specifies files and directories to be ignored by Git.
+- **astro.config.mjs**: Configuration file for Astro.
+- **package.json**: Lists project dependencies and scripts.
+- **tailwind.config.mjs**: Configuration file for Tailwind CSS.
+- **tsconfig.json**: TypeScript configuration file.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🧭 /src structure
 
-### `npm test`
+The `/src` directory contains the main source code for the project. Below is an overview of its structure:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+src
+├── assets
+│   ├── adriana.jpg
+│   ├── euro.jpg
+│   ├── fran.jpg
+│   └── hero.png
+├── components
+│   ├── BaseHead.astro
+│   ├── Footer.astro
+│   ├── FormattedDate.astro
+│   ├── Header.astro
+│   ├── HeaderLink.astro
+│   ├── Hero.astro
+│   └── WhatIDo.astro
+├── consts.ts
+├── content
+│   └── blog
+│       └── content in markdown format
+├── content.config.ts
+├── icons
+│   ├── 1.svg
+│   ├── 2.svg
+│   ├── 3.svg
+│   ├── 4.svg
+│   ├── 5.svg
+│   ├── beach.svg
+│   ├── github.svg
+│   ├── linkedin.svg
+│   ├── paint.svg
+│   └── web.svg
+├── layouts
+│   └── BlogPost.astro
+├── pages
+│   ├── about.astro
+│   ├── blog
+│   │   ├── index.astro
+│   │   └── [...slug].astro
+│   ├── index.astro
+│   └── rss.xml.js
+└── styles
+    ├── global.css
+    └── hamburgers.css
+```
 
-### `npm run build`
+#### Explanation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **assets**: Contains image files used in the project.
+- **components**: Contains reusable UI components built with Astro.
+- **content**: Contains blog content in Markdown format.
+- **content.config.ts**: Configuration file for content collections.
+- **icons**: Contains SVG icon files used in the project.
+- **layouts**: Contains layout components.
+  - `BlogPost.astro`: Layout component for blog posts.
+- **pages**: Contains the main pages of the site.
+  - `blog/index.astro`: Blog index page.
+  - `blog/[...slug].astro`: Dynamic route for individual blog posts.
+- **styles**: Contains global and component-specific CSS files.
+  - `global.css`: Global styles for the project.
+  - `hamburgers.css`: Styles for the hamburger menu.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This structure helps in organizing the project files and makes it easier to maintain and scale the project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## 🚀 Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To run this project locally:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repository:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   git clone https://github.com/jramma/sorollaportfolio.git
+   cd sorollaportfolio
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install dependencies:**
 
-## Learn More
+   ```bash
+   bun install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Start the development server:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   bun dev
+   ```
 
-### Code Splitting
+   The application will be available at `http://localhost:4321`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🛠️ Technologies Used
 
-### Analyzing the Bundle Size
+- **Astro**: A modern static site builder.
+- **Tailwind CSS**: A utility-first CSS framework.
+- **TypeScript**: A statically typed programming language.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📄 License
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](LICENSE).
